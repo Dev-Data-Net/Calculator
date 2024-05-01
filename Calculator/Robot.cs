@@ -23,5 +23,10 @@ namespace Calculator
             var currentTime = DateTime.Now;
             return currentTime;
         }
+
+        public static void SayHelloStatic()
+        {
+            Console.WriteLine("Cześć, jestem robot. Wywowałeś metodę statyczną.");
+        }
     }
 }

@@ -38,18 +38,26 @@ namespace Calculator
             //age = int.Parse(myAge);
             //myAge = age.ToString();
 
-            var robot = new Robot("1234");
-            var robot2 = new Robot("2222");
-            var robot3 = new Robot("3333");
-            var robot4 = new Robot("4444");
-            robot.SayHello();
-            robot2.SayHello();
-            robot3.SayHello();
-            robot4.SayHello();
+            //var robot = new Robot("1234");
+            //var robot2 = new Robot("2222");
+            //var robot3 = new Robot("3333");
+            //var robot4 = new Robot("4444");
+            //robot.SayHello();
+            //robot2.SayHello();
+            //robot3.SayHello();
+            //robot4.SayHello();
 
-            var currentRobotTime = robot.GetCurrentDate();
-            robot.Name = "Robot 2020";
-            Console.WriteLine(robot.Name);
+            //var currentRobotTime = robot.GetCurrentDate();
+            //robot.Name = "Robot 2020";
+            //Console.WriteLine(robot.Name);
+
+            var sum = Calculate.Sum(1, 8);
+            Console.WriteLine(sum);
+
+            var robot5 = new Robot("5555");
+            robot5.SayHello();
+            Robot.SayHelloStatic();
+
         }
     }
 
