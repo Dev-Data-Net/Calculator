@@ -58,25 +58,59 @@ namespace Calculator
             //robot5.SayHello();
             //Robot.SayHelloStatic();
 
-            // typ wartościowy
-            var minAge = 10;
-            var maxAge = 20;
-            minAge = maxAge;
-            maxAge = 21;
-            Console.WriteLine(minAge);
+            //// typ wartościowy
+            //var minAge = 10;
+            //var maxAge = 20;
+            //minAge = maxAge;
+            //maxAge = 21;
+            //Console.WriteLine(minAge);
 
-            // typ referencyjny
-            var robot6 = new Robot("1") { Name = "1" };
-            var robot7 = new Robot("2") { Name = "2" };
-            robot6 = robot7;
-            robot7.Name = "3";
-            Console.WriteLine(robot6.Name);
+            //// typ referencyjny
+            //var robot6 = new Robot("1") { Name = "1" };
+            //var robot7 = new Robot("2") { Name = "2" };
+            //robot6 = robot7;
+            //robot7.Name = "3";
+            //Console.WriteLine(robot6.Name);
 
-            // typ nullowalny
-            int? age = null;
+            //// typ nullowalny
+            //int? age = null;
 
+            //var minAge = 10;
+            //var maxAge = 20;
+
+            //Console.WriteLine("Proszę podaj swój wiek: ");
+            //var age = int.Parse(Console.ReadLine());
+
+            //// instrukcja warunkowa if
+            //if (age >= minAge && age <= maxAge)
+            //{
+            //    Console.WriteLine("Możesz dołączyć do klubu.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Nie możesz dołączyć do klubu.");
+            //}
+
+
+            // switch
+            var number = int.Parse(Console.ReadLine());
+
+            switch (number)
+            {
+                case 1:
+                    Console.WriteLine("Wybrałeś 1.");
+                    break;
+                case 2:
+                    Console.WriteLine("Wybrałeś 2.");
+                    break;
+                default:
+                    Console.WriteLine("Wybrałeś złą wartość.");
+                    break;
+
+
+            }
         }
+
+
     }
-
-
 }
