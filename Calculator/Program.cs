@@ -51,12 +51,29 @@ namespace Calculator
             //robot.Name = "Robot 2020";
             //Console.WriteLine(robot.Name);
 
-            var sum = Calculate.Sum(1, 8);
-            Console.WriteLine(sum);
+            //var sum = Calculate.Sum(1, 8);
+            //Console.WriteLine(sum);
 
-            var robot5 = new Robot("5555");
-            robot5.SayHello();
-            Robot.SayHelloStatic();
+            //var robot5 = new Robot("5555");
+            //robot5.SayHello();
+            //Robot.SayHelloStatic();
+
+            // typ wartościowy
+            var minAge = 10;
+            var maxAge = 20;
+            minAge = maxAge;
+            maxAge = 21;
+            Console.WriteLine(minAge);
+
+            // typ referencyjny
+            var robot6 = new Robot("1") { Name = "1" };
+            var robot7 = new Robot("2") { Name = "2" };
+            robot6 = robot7;
+            robot7.Name = "3";
+            Console.WriteLine(robot6.Name);
+
+            // typ nullowalny
+            int? age = null;
 
         }
     }
