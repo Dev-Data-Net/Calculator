@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Calculator
 {
@@ -92,24 +93,71 @@ namespace Calculator
             //}
 
 
-            // switch
-            var number = int.Parse(Console.ReadLine());
+            //// switch
+            //var number = int.Parse(Console.ReadLine());
 
-            switch (number)
+            //switch (number)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Wybrałeś 1.");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Wybrałeś 2.");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Wybrałeś złą wartość.");
+            //        break;
+
+
+            //}
+
+            // pętla while
+            //var i = 0;
+            //while (i <= 100)
+            //{
+            //    if (i == 39)
+            //    {
+            //        i++;
+            //        continue;
+            //        // break;
+            //    }
+            //    Console.WriteLine(i);
+            //    i++;
+
+            //}
+            //// pętla do while
+            //do
+            //{
+            //}
+            //while (true);
+
+            //// pętla for
+            //int length = 100;
+            //for (int j = 0; j < length; j++)
+            //{
+            //    Console.WriteLine(j);
+            //}
+
+            // pętla for each
+            var numbers5 = new List<int>();
+            Console.WriteLine("Proszę podaj 5 liczb, każdą zatwierdż enterem.");
+
+            for (int n = 0; n < 5; n++)
             {
-                case 1:
-                    Console.WriteLine("Wybrałeś 1.");
-                    break;
-                case 2:
-                    Console.WriteLine("Wybrałeś 2.");
-                    break;
-                default:
-                    Console.WriteLine("Wybrałeś złą wartość.");
-                    break;
-
-
+                numbers5.Add(int.Parse(Console.ReadLine()));
             }
+
+            Console.WriteLine("Twoje liczby to: ");
+
+            foreach (var item in numbers5)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
         }
+
 
 
     }
