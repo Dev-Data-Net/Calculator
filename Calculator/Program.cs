@@ -138,22 +138,52 @@ namespace Calculator
             //    Console.WriteLine(j);
             //}
 
-            // pętla for each
-            var numbers5 = new List<int>();
-            Console.WriteLine("Proszę podaj 5 liczb, każdą zatwierdż enterem.");
+            //// pętla for each
+            //var numbers5 = new List<int>();
+            //Console.WriteLine("Proszę podaj 5 liczb, każdą zatwierdż enterem.");
 
-            for (int n = 0; n < 5; n++)
+            //for (int n = 0; n < 5; n++)
+            //{
+            //    numbers5.Add(int.Parse(Console.ReadLine()));
+            //}
+
+            //Console.WriteLine("Twoje liczby to: ");
+
+            //foreach (var item in numbers5)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            // rzucanie wyjątków
+            try
             {
-                numbers5.Add(int.Parse(Console.ReadLine()));
+                Console.WriteLine("Dzielenie dwóch liczb. \n Podaj dzielną:");
+                var dividend = decimal.Parse(Console.ReadLine());
+
+                Console.WriteLine("\n Podaj dzielnik: ");
+                var divider = decimal.Parse(Console.ReadLine());
+
+                var result = dividend / divider;
+
+                Console.WriteLine(" \n Iloraz wynosi: \n " + result);
             }
-
-            Console.WriteLine("Twoje liczby to: ");
-
-            foreach (var item in numbers5)
+            catch (DivideByZeroException ex)
             {
-                Console.WriteLine(item);
+                // logika odpowiedzialna za zapisywanie informacji o błędzie do pliku
+                Console.WriteLine("Nie można dzielić przez 0.");
+                throw ex;
             }
-
+            catch (Exception ex)
+            {
+                // logika odpowiedzialna za zapisywanie informacji o błędzie do pliku
+                Console.WriteLine("Nieprawidłowe dane."); // można też wpisać ex.Message
+            }
+            finally
+            {
+                // tekst lub kod, który zostanie wykonany zawsze, dzięki finally.
+                Console.WriteLine("Kod po try catch.");
+            }
+            
 
 
         }
