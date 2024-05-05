@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Calculator
 {
@@ -157,6 +158,9 @@ namespace Calculator
             // rzucanie wyjątków
             try
             {
+                Add(1, 2);
+                Add(3,4);
+
                 Console.WriteLine("Dzielenie dwóch liczb. \n Podaj dzielną:");
                 var dividend = decimal.Parse(Console.ReadLine());
 
@@ -184,10 +188,14 @@ namespace Calculator
                 Console.WriteLine("Kod po try catch.");
             }
             
+            
 
 
         }
-
+        private static void Add(int a, int b)
+        {
+            //logika kodu
+        }
 
 
     }
